@@ -1,7 +1,6 @@
 #include "stm32f10x.h"                  // Device header
 #include "Delay.h"
 #include "OLED.h"
-#include "MPU6050.h"
 #include "Motor.h"
 #include "Key.h"
 #include "LightSensor.h"
@@ -56,17 +55,19 @@ int main(void)
 	Key_Init();			//按键初始化
 	LightSensor_Init();	//灰度传感器初始化
 	Encoder_Init();		//测速编码器初始化	
-	MPU6050_Init();		//MPU6050初始化
 	Serial_Init();		//串口初始化
 	Timer_Init();		//定时器初始化
 	
 
+	//电机使能
+	Motor_Enable();
+
 	
 while (1)
 	{
-		KeyNum = Key_GetNum();//获取按键状态
+		// KeyNum = Key_GetNum();//获取按键状态
 		
-		if (KeyNum == 1)	//按键按下时标志位取反,用于控制程序开关
+		if (Key_Check(KEY_1,KEY_DOWN))	//按键按下时标志位取反,用于控制程序开关
 		{
 			P = !P;
 		}

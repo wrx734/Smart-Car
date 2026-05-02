@@ -8,20 +8,14 @@
 void LightSensor_Init(void)
 {
 	/*开启时钟*/
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);		//开启GPIOB的时钟
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 	/*GPIO初始化*/
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);						//将PB12,PB13,PB14,PB15引脚初始化为上拉输入
 	
 	GPIO_InitTypeDef GPIO_InitStructure2;						//开启GPIOA的时钟
 	GPIO_InitStructure2.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure2.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11;
-	GPIO_InitStructure2.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure2);						//将PA8引脚初始化为上拉输入
+    GPIO_InitStructure2.GPIO_Pin   = GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_5 | GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12 ;
+    GPIO_InitStructure2.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStructure2);						//将PA 2 3 5 8 9 11 12引脚初始化为上拉输入
 }
 
 /**
@@ -32,22 +26,22 @@ void LightSensor_Init(void)
 
 uint8_t LightSensor_Get_R4(void)
 {
-	return GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_12);			//返回PB12输入寄存器的状态 右4
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_12);			//返回PA12输入寄存器的状态 右4
 }
 
 uint8_t LightSensor_Get_R3(void)
 {
-	return GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_13);			//返回PB13输入寄存器的状态	右3
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_11);			//返回PA11输入寄存器的状态	右3
 }
 
 uint8_t LightSensor_Get_R2(void)
 {
-	return GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_14);			//返回PB14输入寄存器的状态	右2
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_10);			//返回PA10输入寄存器的状态	右2
 }
 
 uint8_t LightSensor_Get_R1(void)
 {
-	return GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_15);			//返回PB15输入寄存器的状态	右1
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_9);			//返回PA9输入寄存器的状态	右1
 }
 
 
@@ -58,17 +52,17 @@ uint8_t LightSensor_Get_L1(void)
 
 uint8_t LightSensor_Get_L2(void)
 {
-	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_9);			//返回PB13输入寄存器的状态	左2
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5);			//返回PA5输入寄存器的状态	左2
 }
 
 uint8_t LightSensor_Get_L3(void)
 {
-	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_10);			//返回PB14输入寄存器的状态	左3
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_3);			//返回PA3输入寄存器的状态	左3
 }
 
 uint8_t LightSensor_Get_L4(void)
 {
-	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_11);			//返回PB15输入寄存器的状态	左4
+	return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2);			//返回PA2输入寄存器的状态	左4
 }
 
 

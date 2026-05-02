@@ -3,5 +3,7 @@
 
 void Motor_Init(void);
 void Motor_SetSpeed(int16_t Speed_L,int16_t Speed_R);
+void Motor_Enable(void);
+void Motor_Disable(void);
 
 #endif

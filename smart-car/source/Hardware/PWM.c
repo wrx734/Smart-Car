@@ -30,7 +30,7 @@ void PWM_Init(void)							//初始化
 	TIM_OC1Init(TIM2, &TIM_OCInitStructure);
 	
 	TIM_OCInitTypeDef TIM_OCInitStructure2;
-	TIM_OCStructInit(&TIM_OCInitStructure);
+	TIM_OCStructInit(&TIM_OCInitStructure2);
 	TIM_OCInitStructure2.TIM_OCMode = TIM_OCMode_PWM1;
 	TIM_OCInitStructure2.TIM_OCPolarity = TIM_OCPolarity_High;
 	TIM_OCInitStructure2.TIM_OutputState = TIM_OutputState_Enable;
@@ -40,12 +40,12 @@ void PWM_Init(void)							//初始化
 	TIM_Cmd(TIM2, ENABLE);
 }
 
-void PWM_SetCompare1(uint16_t Compare)			//定时器2,通道1,右轮
+void PWM_SetCompare1(uint16_t Compare)			//定时器2,通道1,左轮
 {
 	TIM_SetCompare1(TIM2, Compare);
 }
 
-void PWM_SetCompare2(uint16_t Compare)			//定时器2,通道2,左轮
+void PWM_SetCompare2(uint16_t Compare)			//定时器2,通道2,右轮
 {
 	TIM_SetCompare2(TIM2, Compare);
 }

@@ -32,7 +32,7 @@ void Timer_Init(void)
 }
 
 /*
-void TIM4_UP_IRQHandler(void)
+void TIM4_IRQHandler(void)
 {
 	if (TIM_GetITStatus(TIM4, TIM_IT_Update) == SET)
 	{

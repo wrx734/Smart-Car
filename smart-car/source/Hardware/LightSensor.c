@@ -106,3 +106,15 @@ int16_t Get_Turn_Value(void)			//获取转向值
 }
 
 
+//检测是否经过黑线
+uint8_t LightSensor_Check_AllBlack(void)
+{
+    return (LightSensor_Get_L4() &
+            LightSensor_Get_L3() &
+            LightSensor_Get_L2() &
+            LightSensor_Get_L1() &
+            LightSensor_Get_R1() &
+            LightSensor_Get_R2() &
+            LightSensor_Get_R3() &
+            LightSensor_Get_R4());
+}

@@ -26,13 +26,13 @@ void Motor_SetSpeed(int16_t Speed_L,int16_t Speed_R)		//速度设置
 	if (Speed_L >= 0)
 	{
 		GPIO_SetBits(GPIOB, GPIO_Pin_4);
-		GPIO_ResetBits(GPIOB, GPIO_Pin_4);
+		GPIO_ResetBits(GPIOB, GPIO_Pin_3);
 		PWM_SetCompare1(Speed_L);
 	}
 	else
 	{
-		GPIO_ResetBits(GPIOB, GPIO_Pin_3);
-		GPIO_SetBits(GPIOB, GPIO_Pin_4);
+		GPIO_ResetBits(GPIOB, GPIO_Pin_4);
+		GPIO_SetBits(GPIOB, GPIO_Pin_3);
 		PWM_SetCompare1(-Speed_L);
 	}
 	
@@ -44,8 +44,8 @@ void Motor_SetSpeed(int16_t Speed_L,int16_t Speed_R)		//速度设置
 	}
 	else
 	{
-		GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-		GPIO_SetBits(GPIOB, GPIO_Pin_0);
+		GPIO_ResetBits(GPIOB, GPIO_Pin_0);
+		GPIO_SetBits(GPIOB, GPIO_Pin_1);
 		PWM_SetCompare2(-Speed_R);
 	}
 }

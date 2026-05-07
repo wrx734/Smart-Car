@@ -1,0 +1,40 @@
+Date : 2026-05-05 19:55:25
+Directory : e:\桌面\Smart-Car\Code\smart-car\source
+Total : 14 files,  986 codes, 307 comments, 175 blanks, all 1468 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C        |         14 |        986 |        307 |        175 |      1,468 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                            |         14 |        986 |        307 |        175 |      1,468 |
+| Hardware                                                     |         13 |        966 |        292 |        168 |      1,426 |
+| User                                                         |          1 |         20 |         15 |          7 |         42 |
++--------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                     | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------+----------+------------+------------+------------+------------+
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\Encoder.c     | C        |        -66 |        -33 |        -13 |       -112 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\Encoder.h     | C        |         -6 |          0 |         -3 |         -9 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\Encoder_L.c   | C        |         36 |         22 |          7 |         65 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\Encoder_L.h   | C        |          5 |          0 |          3 |          8 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\Encoder_R.c   | C        |         66 |         27 |         14 |        107 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\Encoder_R.h   | C        |          5 |          0 |          3 |          8 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\LightSensor.c | C        |         11 |          1 |          0 |         12 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\LightSensor.h | C        |          1 |          0 |          0 |          1 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\OLED.c        | C        |        580 |        462 |        114 |      1,156 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\OLED.h        | C        |         22 |         14 |         14 |         50 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\OLED_Data.c   | C        |        319 |         45 |         27 |        391 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\OLED_Data.h   | C        |         19 |         11 |         13 |         43 |
+| e:\桌面\Smart-Car\Code\smart-car\source\Hardware\OLED_Font.h   | C        |        -26 |       -257 |        -11 |       -294 |
+| e:\桌面\Smart-Car\Code\smart-car\source\User\main.c            | C        |         20 |         15 |          7 |         42 |
+| Total                                                        |          |        986 |        307 |        175 |      1,468 |
++--------------------------------------------------------------+----------+------------+------------+------------+------------+

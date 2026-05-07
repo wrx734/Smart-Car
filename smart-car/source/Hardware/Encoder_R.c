@@ -64,7 +64,7 @@ int16_t Encoder_R_Get(void)
     int16_t Temp, Temp2;
     Temp            = Encoder_R_Count;
     Encoder_R_Count = 0;
-    Temp2 = 199 * Temp / 43;
+    Temp2           = 199 * Temp / 43;
     return Temp2;
 }
 

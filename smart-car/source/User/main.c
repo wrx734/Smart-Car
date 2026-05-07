@@ -4,8 +4,6 @@
 #include "Mode3.h"
 #include "Global.h"
 
-uint8_t CurrMode, NextMode = 1;
-
 int main(void)
 {
     Global_Init();

@@ -10,6 +10,7 @@
 #include "Timer.h"
 #include "PID.h"
 #include "PWM.h"
+#include "Global.h"
 
 /*模式1*/
 
@@ -19,14 +20,12 @@ int16_t Location, Speed_Base = 50; // 用于最后速度输出的基准速度
 降低速度,增大KP,减小KD,增大KI
 */
 
-uint8_t KeyNum;                               // 定义用于存放按键的变量
 int16_t Speed_L, Speed_R;                     // 存放获取的实际速度用于后续计算
 float k = 0.3;                                // 用于进行速度滤波的变量
 int16_t filt_Speed_L, filt_Speed_R;           // 存放滤波后要传给pid的速度值
 int16_t last_file_Speed_L, last_file_Speed_R; // 存放用于滤波计算的上一次速度值
 
 uint8_t P = 0; // 标志位用于按键控制开关
-extern uint8_t KeyNum;
 
 /*定义PID结构体变量*/
 // 内环 速度环
@@ -104,10 +103,9 @@ void Mode1_Exit(void)
     Motor_SetSpeed(0, 0); // 电机以0的速度运行
     Motor_Disable();      // 电机禁用
     OLED_Clear();
-    StopDelayCount = 0;
 }
 
-void Mode3_Tick(void)
+void Mode1_Tick(void)
 {
     if (TIM_GetITStatus(TIM4, TIM_IT_Update) == SET) {
 

@@ -1,9 +1,7 @@
-#include "stm32f10x.h"                  // Device header
+#include "stm32f10x.h" // Device header
 #include "OLED.h"
 
 /*模式2*/
-extern uint8_t KeyNum;
-uint8_t Count;
 
 void Mode2_Init(void)
 {
@@ -14,10 +12,13 @@ void Mode2_Init(void)
 
 void Mode2_Loop(void)
 {
-
 }
 
 void Mode2_Exit(void)
 {
-
 }
+
+void Mode2_Tick(void)
+{
+}
+
